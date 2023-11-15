@@ -374,7 +374,7 @@ public class SSLComponent extends GenericSSLConfigService implements SSLSupportO
 
         String hostNameVerification = (String) props.get(LibertyConstants.KEY_OUTBOUND_HOSTNAME_VERIFICATION);
         if (hostNameVerification != null) {
-            props.put(Constants.SSLPROP_URL_HOSTNAME_VERIFICATION, hostNameVerification);
+            props.put(Constants.SSLPROP_URL_HOSTNAME_VERIFICATION, "true");
         }
 
         return props;

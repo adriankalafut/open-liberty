@@ -4,7 +4,7 @@
  * are made available under the terms of the Eclipse Public License 2.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-2.0/
- * 
+ *
  * SPDX-License-Identifier: EPL-2.0
  *
  * Contributors:
@@ -114,11 +114,11 @@ public class SSLConfigManager {
     /***
      * This method parses the configuration.
      *
-     * @param map Global SSL configuration properties, most likely injected from SSLComponent
-     * @param reinitialize Boolean flag to indicate if the configuration should be re-loaded
-     * @param isServer Boolean flag to indiciate if the code is running within a server process
+     * @param map                      Global SSL configuration properties, most likely injected from SSLComponent
+     * @param reinitialize             Boolean flag to indicate if the configuration should be re-loaded
+     * @param isServer                 Boolean flag to indiciate if the code is running within a server process
      * @param transportSecurityEnabled Boolean flag to indicate if the transportSecurity-1.0 feature is enabled
-     * @param aliasPIDs Map of OSGi PID-indexed repertoire IDs
+     * @param aliasPIDs                Map of OSGi PID-indexed repertoire IDs
      * @throws Exception
      ***/
     public synchronized void initializeSSL(Map<String, Object> map,
@@ -1208,7 +1208,7 @@ public class SSLConfigManager {
      ***/
     public synchronized void checkURLHostNameVerificationProperty(boolean reinitialize) {
         // enable/disable hostname verification
-        String urlHostNameVerification = getGlobalProperty(Constants.SSLPROP_URL_HOSTNAME_VERIFICATION);
+        String urlHostNameVerification = "true";
 
         if (urlHostNameVerification == null || urlHostNameVerification.equalsIgnoreCase("false") || urlHostNameVerification.equalsIgnoreCase("no")) {
             if (TraceComponent.isAnyTracingEnabled() && tc.isDebugEnabled())
