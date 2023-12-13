@@ -288,7 +288,9 @@ public class SimpleHttpClient {
         con.setRequestMethod( requestMethod );
         
         if (Boolean.getBoolean("com.ibm.ws.jbatch.utility.https.disableHostnameVerification")) {
-            disableHostnameVerification((HttpsURLConnection) con);
+            //disableHostnameVerification((HttpsURLConnection) con);
+        	System.out.println("Adrian -- getConnection");
+        	System.out.println("Adrian -- here");
         }
         
         // If -Djavax.net.ssl.keyStore is specified, then we assume the user wants to use

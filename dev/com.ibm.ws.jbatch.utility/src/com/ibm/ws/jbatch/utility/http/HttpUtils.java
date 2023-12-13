@@ -86,6 +86,7 @@ public class HttpUtils {
      */
     public static void setDefaultTrustAllCertificates() {
 
+    	System.out.println("Adrian -- setDefaultTrustAllCertificates");
 
         try {
             SSLContext sc =  SSLContext.getInstance("SSL");
@@ -100,7 +101,8 @@ public class HttpUtils {
             HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
             
             // Install the all-trusting host verifier
-            HttpsURLConnection.setDefaultHostnameVerifier(getTrustAllHostnames());
+            System.out.println(HttpsURLConnection.getDefaultHostnameVerifier()==null ? HttpsURLConnection.getDefaultHostnameVerifier():  HttpsURLConnection.getDefaultHostnameVerifier().toString());
+            //HttpsURLConnection.setDefaultHostnameVerifier(getTrustAllHostnames());
             
             // Set as default for SimpleHttpClient.getConnection
             SSLContext.setDefault(sc);

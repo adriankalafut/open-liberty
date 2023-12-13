@@ -63,7 +63,9 @@ public class LibertyClientHttpEngineBuilder43 extends ClientHttpEngineBuilder43 
 
         ApacheHttpClient43Engine engine = new ApacheHttpClient43Engine(httpClient, true);
         engine.setResponseBufferSize(responseBufferSize);
-        engine.setHostnameVerifier(verifier);
+        //engine.setHostnameVerifier(verifier);
+        System.out.println("Adrian -- here");
+        System.out.println(engine.getHostnameVerifier()==null? "null" :engine.getHostnameVerifier().toString());
         // this may be null.  We can't really support this with Apache Client.
         engine.setSslContext(theContext);
         engine.setFollowRedirects(that.isFollowRedirects());

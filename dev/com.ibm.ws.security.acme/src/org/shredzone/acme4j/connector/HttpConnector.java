@@ -159,7 +159,8 @@ public class HttpConnector {
 				&& !("acme".equalsIgnoreCase(scheme) && "pebble".equalsIgnoreCase(host))) {
 			HttpsURLConnection conns = (HttpsURLConnection) conn;
 			conns.setSSLSocketFactory(createSocketFactory(url));
-			conns.setHostnameVerifier((h, s) -> true);
+			System.out.println("Adrian -- missing HNV");
+			//conns.setHostnameVerifier((h, s) -> true);
 		}
 	}
 
@@ -205,7 +206,6 @@ public class HttpConnector {
 			 */
 			sslConfig = AcmeProviderImpl.getSSLConfig();
 		}
-
 		/*
 		 * Use the SSLConfig if one is provided, otherwise just use the default
 		 * TrustManager.
