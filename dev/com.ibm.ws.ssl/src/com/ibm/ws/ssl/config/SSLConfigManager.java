@@ -1208,7 +1208,7 @@ public class SSLConfigManager {
      ***/
     public synchronized void checkURLHostNameVerificationProperty(boolean reinitialize) {
         // enable/disable hostname verification
-        String urlHostNameVerification = "true";
+        String urlHostNameVerification = getGlobalProperty(Constants.SSLPROP_URL_HOSTNAME_VERIFICATION);
 
         if (urlHostNameVerification == null || urlHostNameVerification.equalsIgnoreCase("false") || urlHostNameVerification.equalsIgnoreCase("no")) {
             if (TraceComponent.isAnyTracingEnabled() && tc.isDebugEnabled())
