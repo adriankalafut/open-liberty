@@ -33,10 +33,11 @@
 	<include location="imports/BasicRegistry_withoutIDPUsers.xml" />
 	<include location="imports/misc.xml" />
 	<include location="imports/samlProvider1_caller.xml" />
-	<include location="imports/goodSSLSettings.xml" />
+	<!-- <include location="imports/goodSSLSettings.xml" /> -->
+	<!-- disable hostname verification -->
+	<include location="imports/goodSSLSettingsHostnameVerifyFalse.xml" />
 	<include location="imports/securityClient_1.xml" />
 	<include location="imports/samlcallerclient_testApp.xml" />
     <include location="imports/java2Permissions.xml" />
     
 </server>
-
